@@ -1,0 +1,97 @@
+
+#pageGame {
+    visibility: hidden;
+}
+
+.menuhaut {
+    height: 10vh;
+    width: inherit;
+    display: flex;
+}
+
+/*Partie Menu du haut*/
+.menu{
+    align-items: center;
+    justify-content: center;
+}
+
+.divmenu {
+    width: 10vw;
+    height: inherit;
+    margin-right: 1vw;
+}
+
+.retourstp {
+    position: absolute;
+}
+
+#Redistribution{
+    position:relative;
+    top:-3vw;
+}
+
+#affPoints {
+    text-align: center;
+    font-family: Montserrat, impact, Arial Black;
+    font-size: 2vw;
+    margin-top: 1.2vw;
+    color: var(--lightsedonca);
+}
+
+#affSolution {
+    text-align: center;
+    font-family: Montserrat, impact, Arial Black;
+    font-size: 2.5vw;
+    color: var(--lightsedonca);
+    width: inherit;
+}
+
+#textjouer2 {
+    position: absolute;
+    text-align: center;
+    font-family: Montserrat, impact, Arial Black;
+    margin-top: 0.6vw;
+    color: var(--lightsedonca);
+    width: inherit;
+
+}
+
+#btnvalider2 {
+    position: relative;
+    text-align: center;
+    font-family: Montserrat, impact, Arial Black;
+    font-size: 2.5vw;
+    margin-top: 0.2vw;
+    margin-left: 0.2vw;
+    color: var(--lightsedonca);
+}
+
+#btnvalider3 {
+    position: relative;
+    text-align: center;
+    font-family: Montserrat, impact, Arial Black;
+    font-size: 2.5vw;
+    margin-top: 0.2vw;
+    margin-left: 0.2vw;
+    color: var(--lightsedonca);
+}
+
+#Redistribution2 {
+    position: relative;
+    top:-3vw;
+    left:68%;
+}
+
+#Redistribution3 {
+    position: relative;
+    top:-3vw;
+    left: 50%;
+}
+
+
+.bouttonvalider2:hover {
+    box-shadow: 0 0 0 8px var(--lightsedonca);
+    font-size: 100%;
+    position: relative;
+    transition: box-shadow 0.2s ease;
+}

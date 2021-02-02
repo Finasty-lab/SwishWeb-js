@@ -1,0 +1,674 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="fr">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SwishGame</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/phone.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/desktops.css">
+    <link rel="stylesheet" href="css/PageDaccueil.css">
+    <link rel="stylesheet" href="css/PartieGame.css">
+    <link rel="stylesheet" href="css/pickr.min.css">
+    <link rel="stylesheet" href="css/formes.css">
+    <link rel="stylesheet" href="css/Resp3.css">
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+
+
+</head>
+<body onload="settingOpen()">
+
+
+
+    <div id="pageAccueil">
+        <div class="logo">
+            <a onclick="journuit()">
+                <img src="imgs/swishjour.png" id="imglogo">
+            </a>
+        </div>
+
+        <div class="containerparam">
+            <div id="infosec">
+                <div class="inner">
+                    <ul class="activity">
+                        <li id="listeinfobtn">
+                            <a id="info" href="#popup1">i</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="infosec2">
+                <div class="inner">
+                    <ul class="activity">
+                        <li id="listeinfobtn">
+                            <a id="info" onclick="settingOpen()" href="#popup2">&#9881;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="containpseudo">
+            <a onclick="lancerpartie()">
+                <div id="contourbuttonvalider">
+                    <div class="bouttonvalider">
+                        <h1 id="textjouer">JOUER</h1>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Les Règles :</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    Swish : Jeu de 60 cartes compos&eacute chacun de billes et de cerceaux, de 4 couleurs
+                    diff&eacuterentes possibles. 16 cartes sont pos&eacutes sur une table et le joueur doit faire superposer
+                    des cartes de mani&egravere que chaque bille soit dans le cerceau de m&ecircme couleur d’une autre
+                    carte.
+                </div>
+            </div>
+        </div>
+
+        <div id="popup2" class="overlay">
+            <div class="popup2">
+                <h2 id="SettingName">Param&#232;tres</h2>
+                <a class="close" onclick="SettingClose()" href="#">&times;</a>
+                <div class="content">                    
+                    <div id="couleurs" class="Mode_Setting">
+                        <br>
+                        <div id="pickrcontner">
+                            <div class="containform3">
+                                <a onclick="disableCache('rond')" id="cacherond" class="cache cn rond"></a>
+                                <div class="containexte">
+                                    <a onclick="ableCache('rond')" class="containinte cb round"></a>
+                                    <div class="color-picker"></div>
+                                </div>
+                            </div>
+                            <div class="containform3">
+                                <a onclick="disableCache('carre')" id="cachecarre" class="cache cn carre"></a>
+                                <div class="containexte">
+                                    <a onclick="ableCache('carre')" class="containinte cb carre"></a>
+                                    <div class="color-picker2"></div>
+                                </div>
+                            </div>
+                            <div class="containform3">
+                                <a onclick="disableCache('triangle')" id="cachetriangle" class="cache cn triangle"></a>
+                                <div class="containexte">
+                                    <a onclick="ableCache('triangle')" class="containinte cb castriangle triangle"></a>
+                                    <div class="color-picker3"></div>
+                                </div>
+                            </div>
+                            <div class="containform3">
+                                <a onclick="disableCache('losange')" id="cachelosange" class="cache cn losange"></a>
+                                <div class="containexte">
+                                    <a onclick="ableCache('losange')" class="containinte cb losange"></a>
+                                    <div class="color-picker4"></div>
+                                </div>
+                            </div>
+                            <div class="containform3">
+                                <a onclick="disableCache('croix')" id="cachecroix" class="cache cn croix"></a>
+                                <div class="containexte">
+                                    <a onclick="ableCache('croix')" class="containinte cb croixinte"></a>
+                                    <div class="color-picker5"></div>
+                                </div>
+                            </div>
+                            <div class="containform3">
+                                <a onclick="disableCache('penta')" id="cachepenta" class="cache cn penta"></a>
+                                <div class="containexte">
+                                    <a onclick="ableCache('penta')" class="containinte cb caspenta penta"></a>
+                                    <div class="color-picker6"></div>
+                                </div>
+                            </div>
+                            <div class="containform3">
+                                <a onclick="disableCache('hexa')" id="cachehexa" class="cache cn hexa"></a>
+                                <div class="containexte">
+                                    <a onclick="ableCache('hexa')" class="containinte cb hexa"></a>
+                                    <div class="color-picker7"></div>
+                                </div>
+                            </div>
+                            <div class="containform3">
+                                <a onclick="disableCache('hocto')" id="cachehocto" class="cache cn hocto"></a>
+                                <div class="containexte">
+                                    <a onclick="ableCache('hocto')" class="containinte cb hocto"></a>
+                                    <div class="color-picker8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="formSize">
+                            <div class="slider-container">
+                                <span class="bar"><span class="fill"></span></span>
+                                <input onchange="updateValue(this.value)" id="slider" type="range" class="slider" min="1" max="100" value="50">
+                                <script>
+                                    var $slider = $("#slider");
+                                    var $fill = $(".bar .fill");
+
+                                    function setBar(){
+                                        $fill.css("width", $slider.val() + "%");
+                                        valRange = $slider.val();
+                                        changeContour(valRange);
+                                    }
+
+                                    $slider.on("input", setBar);
+
+                                    setBar();
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- COLOR PICKER-->
+        <script>
+            let pannel = document.getElementById("pannel");
+            // Simple example, see optional options for more configuration.
+            var couleur1 = varColorToHex('--colorbase');
+            var couleur2 = varColorToHex('--colorcarre');
+            var couleur3 = varColorToHex('--colorone');
+            var couleur4 = varColorToHex('--colortwo');
+            var couleur5 = varColorToHex('--colorthree');
+            var couleur6 = varColorToHex('--colorfour');
+            var couleur7 = varColorToHex('--colorfive');
+            var couleur8 = varColorToHex('--colorsix');
+            const pickr = Pickr.create({
+                el: '.color-picker',
+                theme: 'classic', // or 'monolith', or 'nano'
+                default: couleur1,
+
+                swatches: [
+                    '#df0024',
+                    '#f3c300',
+                    '#00ab9f',
+                    '#2e6db4',
+                    '#1bff7e',
+                    '#fe1b00',
+                    '#7f00ff',
+                    '#29F073',
+                    '#E6792F',
+                    '#E6DA27',
+                    '#E8695A',
+                    '#2E294E',
+                    '#64A6BD',
+                    '#659157'
+                ],
+
+                components: {
+                    // Main components
+                    preview: true,
+                    opacity: false,
+                    hue: true,
+                    // Input / output Options
+                    interaction: {
+                        hex: false,
+                        rgba: false,
+                        hsla: false,
+                        hsva: false,
+                        cmyk: false,
+                        input: true,
+                        clear: false,
+                        save: true
+                    }
+                }
+            });
+            const pickr2 = Pickr.create({
+                el: '.color-picker2',
+                theme: 'classic', // or 'monolith', or 'nano'
+                default: couleur2,
+
+                swatches: [
+                    '#df0024',
+                    '#f3c300',
+                    '#00ab9f',
+                    '#2e6db4',
+                    '#1bff7e',
+                    '#fe1b00',
+                    '#7f00ff',
+                    '#29F073',
+                    '#E6792F',
+                    '#E6DA27',
+                    '#E8695A',
+                    '#2E294E',
+                    '#64A6BD',
+                    '#659157'
+                ],
+
+                components: {
+                    // Main components
+                    preview: true,
+                    opacity: false,
+                    hue: true,
+                    // Input / output Options
+                    interaction: {
+                        hex: false,
+                        rgba: false,
+                        hsla: false,
+                        hsva: false,
+                        cmyk: false,
+                        input: true,
+                        clear: false,
+                        save: true
+                    }
+                }
+            });
+            const pickr3 = Pickr.create({
+                el: '.color-picker3',
+                theme: 'classic', // or 'monolith', or 'nano'
+                default: couleur3,
+
+                swatches: [
+                    '#df0024',
+                    '#f3c300',
+                    '#00ab9f',
+                    '#2e6db4',
+                    '#1bff7e',
+                    '#fe1b00',
+                    '#7f00ff',
+                    '#29F073',
+                    '#E6792F',
+                    '#E6DA27',
+                    '#E8695A',
+                    '#2E294E',
+                    '#64A6BD',
+                    '#659157'
+                ],
+
+                components: {
+                    // Main components
+                    preview: true,
+                    opacity: false,
+                    hue: true,
+                    // Input / output Options
+                    interaction: {
+                        hex: false,
+                        rgba: false,
+                        hsla: false,
+                        hsva: false,
+                        cmyk: false,
+                        input: true,
+                        clear: false,
+                        save: true
+                    }
+                }
+            });
+            const pickr4 = Pickr.create({
+                el: '.color-picker4',
+                theme: 'classic', // or 'monolith', or 'nano'
+                default: couleur4,
+
+                swatches: [
+                    '#df0024',
+                    '#f3c300',
+                    '#00ab9f',
+                    '#2e6db4',
+                    '#1bff7e',
+                    '#fe1b00',
+                    '#7f00ff',
+                    '#29F073',
+                    '#E6792F',
+                    '#E6DA27',
+                    '#E8695A',
+                    '#2E294E',
+                    '#64A6BD',
+                    '#659157'
+                ],
+
+                components: {
+                    // Main components
+                    preview: true,
+                    opacity: false,
+                    hue: true,
+                    // Input / output Options
+                    interaction: {
+                        hex: false,
+                        rgba: false,
+                        hsla: false,
+                        hsva: false,
+                        cmyk: false,
+                        input: true,
+                        clear: false,
+                        save: true
+                    }
+                }
+            });
+            const pickr5 = Pickr.create({
+                el: '.color-picker5',
+                theme: 'classic', // or 'monolith', or 'nano'
+                default: couleur5,
+
+                swatches: [
+                    '#df0024',
+                    '#f3c300',
+                    '#00ab9f',
+                    '#2e6db4',
+                    '#1bff7e',
+                    '#fe1b00',
+                    '#7f00ff',
+                    '#29F073',
+                    '#E6792F',
+                    '#E6DA27',
+                    '#E8695A',
+                    '#2E294E',
+                    '#64A6BD',
+                    '#659157'
+                ],
+
+                components: {
+                    // Main components
+                    preview: true,
+                    opacity: false,
+                    hue: true,
+                    // Input / output Options
+                    interaction: {
+                        hex: false,
+                        rgba: false,
+                        hsla: false,
+                        hsva: false,
+                        cmyk: false,
+                        input: true,
+                        clear: false,
+                        save: true
+                    }
+                }
+            });
+            const pickr6 = Pickr.create({
+                el: '.color-picker6',
+                theme: 'classic', // or 'monolith', or 'nano'
+                default: couleur6,
+
+                swatches: [
+                    '#df0024',
+                    '#f3c300',
+                    '#00ab9f',
+                    '#2e6db4',
+                    '#1bff7e',
+                    '#fe1b00',
+                    '#7f00ff',
+                    '#29F073',
+                    '#E6792F',
+                    '#E6DA27',
+                    '#E8695A',
+                    '#2E294E',
+                    '#64A6BD',
+                    '#659157'
+                ],
+
+                components: {
+                    // Main components
+                    preview: true,
+                    opacity: false,
+                    hue: true,
+                    // Input / output Options
+                    interaction: {
+                        hex: false,
+                        rgba: false,
+                        hsla: false,
+                        hsva: false,
+                        cmyk: false,
+                        input: true,
+                        clear: false,
+                        save: true
+                    }
+                }
+            });
+            const pickr7 = Pickr.create({
+                el: '.color-picker7',
+                theme: 'classic', // or 'monolith', or 'nano'
+                default: couleur7,
+
+                swatches: [
+                    '#df0024',
+                    '#f3c300',
+                    '#00ab9f',
+                    '#2e6db4',
+                    '#1bff7e',
+                    '#fe1b00',
+                    '#7f00ff',
+                    '#29F073',
+                    '#E6792F',
+                    '#E6DA27',
+                    '#E8695A',
+                    '#2E294E',
+                    '#64A6BD',
+                    '#659157'
+                ],
+
+                components: {
+                    // Main components
+                    preview: true,
+                    opacity: false,
+                    hue: true,
+                    // Input / output Options
+                    interaction: {
+                        hex: false,
+                        rgba: false,
+                        hsla: false,
+                        hsva: false,
+                        cmyk: false,
+                        input: true,
+                        clear: false,
+                        save: true
+                    }
+                }
+            });
+            const pickr8 = Pickr.create({
+                el: '.color-picker8',
+                theme: 'classic', // or 'monolith', or 'nano'
+                default: couleur8,
+
+                swatches: [
+                    '#df0024',
+                    '#f3c300',
+                    '#00ab9f',
+                    '#2e6db4',
+                    '#1bff7e',
+                    '#fe1b00',
+                    '#7f00ff',
+                    '#29F073',
+                    '#E6792F',
+                    '#E6DA27',
+                    '#E8695A',
+                    '#2E294E',
+                    '#64A6BD',
+                    '#659157'
+                ],
+
+                components: {
+                    // Main components
+                    preview: true,
+                    opacity: false,
+                    hue: true,
+                    // Input / output Options
+                    interaction: {
+                        hex: false,
+                        rgba: false,
+                        hsla: false,
+                        hsva: false,
+                        cmyk: false,
+                        input: true,
+                        clear: false,
+                        save: true
+                    }
+                }
+            });
+
+
+
+
+            //changement de couleur
+            pickr.on('change', (...args) => {
+                let color = args[0].toRGBA();
+                console.log(color);
+                let newcouleur = `rgba(${color[0]},${color[1]},${color[2]},${color[3]}`
+                document.documentElement.style.setProperty('--colorbase', newcouleur);
+            });
+            pickr2.on('change', (...args) => {
+                let color = args[0].toRGBA();
+                console.log(color);
+                let newcouleur = `rgba(${color[0]},${color[1]},${color[2]},${color[3]}`
+                document.documentElement.style.setProperty('--colorcarre', newcouleur);
+            });
+            pickr3.on('change', (...args) => {
+                let color = args[0].toRGBA();
+                console.log(color);
+                let newcouleur = `rgba(${color[0]},${color[1]},${color[2]},${color[3]}`
+                document.documentElement.style.setProperty('--colorone', newcouleur);
+            });
+            pickr4.on('change', (...args) => {
+                let color = args[0].toRGBA();
+                console.log(color);
+                let newcouleur = `rgba(${color[0]},${color[1]},${color[2]},${color[3]}`
+                document.documentElement.style.setProperty('--colortwo', newcouleur);
+            });
+            pickr5.on('change', (...args) => {
+                let color = args[0].toRGBA();
+                console.log(color);
+                let newcouleur = `rgba(${color[0]},${color[1]},${color[2]},${color[3]}`
+                document.documentElement.style.setProperty('--colorthree', newcouleur);
+            });
+            pickr6.on('change', (...args) => {
+                let color = args[0].toRGBA();
+                console.log(color);
+                let newcouleur = `rgba(${color[0]},${color[1]},${color[2]},${color[3]}`
+                document.documentElement.style.setProperty('--colorfour', newcouleur);
+            });
+            pickr7.on('change', (...args) => {
+                let color = args[0].toRGBA();
+                console.log(color);
+                let newcouleur = `rgba(${color[0]},${color[1]},${color[2]},${color[3]}`
+                document.documentElement.style.setProperty('--colorfive', newcouleur);
+            });
+            pickr8.on('change', (...args) => {
+                let color = args[0].toRGBA();
+                console.log(color);
+                let newcouleur = `rgba(${color[0]},${color[1]},${color[2]},${color[3]}`
+                document.documentElement.style.setProperty('--colorsix', newcouleur);
+            });
+
+
+        </script>
+
+
+
+
+        <div id="containpseudo">
+            <a onclick="lancerpartie()">
+                <div id="contourbuttonvalider">
+                    <div class="bouttonvalider violet" >
+                        <h1 id="textjouer">JOUER</h1>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div id="choosemode">
+
+            <div id="conteneurmode">
+                <a>
+                    <div id="modeprec">
+                        <div id="triangleprec">
+                            
+                        </div>
+                    </div>
+                </a>
+
+                <div id="textdumode">
+                    <h1 id="textmode">Solo</h1>
+                </div>
+                <a>
+                    <div id="modesuiv">
+                        <div id="trianglesuiv">
+                            
+                        </div>
+                    </div>
+                </a>
+
+                
+            </div>
+        </div>
+
+        <div id="containplayers">
+        </div>
+
+
+        <div id="ContainBottom">
+            <!-- présentation des formes -->
+
+        </div>
+
+        <div class="mounts">
+            <img src="imgs/lightcloud.png" id="cloud">
+            <img src="imgs/mount1.png" id="mount1">
+            <img src="imgs/mount2.png" id="mount2">
+        </div>
+    </div>
+
+   <div id="pageGame">
+        <div class="menuhaut menu">
+            <div class="divmenu"></div>
+            
+            <div class="divmenu">
+                <a onclick="retour()" class="bouttonMenuHaut">
+                    <div class="containButtonForm">
+                        <i class="fa fa-arrow-left logoboutton"></i>  
+                    </div>
+                </a>
+            </div>
+
+            <div class="divmenu">
+               <p id="affPoints">Score : 0</p>
+           </div>
+
+            <div class="divmenu logop2">
+               <a onclick="journuit()">
+                   <img src="imgs/swishjour.png" id="imglogo2">
+               </a>
+           </div>   
+            <div class="divmenu">
+                <a onclick="redistribuer()" class="bouttonMenuHaut">
+                    <div class="containButtonForm">
+                        <i class="fa fa-redo logoboutton"></i>  
+                    </div>
+                </a>
+            </div>
+            <div class="divmenu">
+                <a class="bouttonMenuHaut" onclick="test()">
+                    <div class="containButtonForm">
+                        <i class="fas fa-search logoboutton"></i>  
+                    </div>
+                </a>
+            </div>
+            <div class="divmenu">
+                <a onclick="testPourJeuClassique()" id="relancerbtn" class="bouttonMenuHaut">
+                    <div class="containButtonForm">
+                        <i class="fa fa-check logoboutton"></i>  
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <div id="containcards" class="containcards">
+
+        </div>
+
+        <div>
+            <p id="affSolution"></p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,114 @@
+:root{
+	/*couleur héhé*/
+	--lightprima: #DEDEDE;
+	--lightsedonca: #B7B7B7;
+	--lighttercia: #E6E6E6;
+	/*Couleur bases*/
+	--colorbase : #e75259;
+	--colorcarre : #30C0DE;
+	--colorone : #00CBFF;
+	--colortwo : #00FF6E;
+	--colorthree : #C800FF;
+	--colorfour : #E6DA27;
+	--colorfive : #2E6DB4;
+	--colorsix : #E6792F;
+	/*Les formes*/
+	--u: calc(var(--x) / 2.75);
+	--v: calc(var(--y) / 2.75);
+	--w: calc(var(--z) / 2.75);
+	/*Les formes settings*/
+	--x : 10vw;
+	--y : 7vw;
+	--z : 3.75vw;
+}
+
+.test{
+	color: black;
+}
+
+a {
+	cursor: pointer;
+	z-index: 60;
+}
+
+
+
+body {
+	background-color: var(--lightprima);
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	/*Desactiver la selection*/
+	-webkit-user-select: none; /* Chrome  / Safari  */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE 10+ */
+	user-select: none;
+}
+
+
+#ContainBottom {
+position: absolute;
+margin-left: 25vw;
+height: 12vw;
+width: auto;
+bottom: 0;
+z-index: 20;
+}
+
+#clic{
+position: absolute;
+left: 55vw;
+top : 7vw;
+height: auto;
+width: 15vw;
+}
+
+#card-conteneur{
+z-index: 20;
+position: absolute;
+left: 0vw;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: -7vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

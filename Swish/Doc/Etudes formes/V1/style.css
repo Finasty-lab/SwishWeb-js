@@ -1,0 +1,481 @@
+:root{
+	--couleur : black;
+	--couleurfond : white;
+	/*Dimensions*/
+	--x : 5vw;
+	--y : 4vw; /*taille anneau*/
+	--z : 3vw; /*taille rond*/
+}
+/*Rond*/
+
+.containform {
+	position: relative;
+    height: var(--x);
+    width: var(--x);
+    display: table-cell;
+    vertical-align: middle;
+}
+.containform2{
+    position: relative;
+    height: var(--x);
+    width: var(--x);
+    display: table-cell;
+    vertical-align: middle;
+    background-color: var(--couleur);
+}
+
+.anneau {
+	position: relative;
+	left: calc((var(--x) - var(--y)) / 2);
+    background-color: var(--couleur);
+    border-radius: var(--y);
+    height: var(--y);
+    width: var(--y);
+    display: table-cell;
+    vertical-align: middle;
+}
+.anneau2 {
+	position: relative;
+    background-color: var(--couleurfond);
+    border-radius: var(--y);
+    height: var(--y);
+    width: var(--y);
+    left : calc((var(--x) - var(--y))/2);
+    display: table-cell;
+    vertical-align: middle;
+}
+.anneau3 {
+	position: relative;
+    background-color: var(--couleur);
+    border-radius: var(--y);
+    height: var(--y);
+    width: var(--y);
+    margin-left: auto;
+    margin-right: auto;
+}
+.rondinterieur {
+    background-color: var(--couleurfond);
+    height: var(--z);
+    width: var(--z);
+    display: table;
+    margin: 0 auto;
+    border-radius: var(--z);
+}
+.rond {
+    display: table;
+    margin: 0 auto;
+    background-color: var(--couleur);
+    height: var(--z);
+    width: var(--z);
+    border-radius: var(--z);
+}
+.rond2 {
+	display: table;
+    margin: 0 auto;
+    background-color: var(--couleurfond);
+    height: var(--z);
+    width: var(--z);
+    border-radius: var(--z);
+}
+.rond3 {
+	position: relative;
+	top : calc((var(--y) - var(--z))/ 2);
+	left : calc((var(--y) - var(--z))/2);
+	display: table-cell;
+    vertical-align: middle;
+    background-color: var(--couleurfond);
+    height: var(--z);
+    width: var(--z);
+    border-radius: var(--z);
+}
+.rond4 {
+	display: table;
+    margin: 0 auto;
+    background-color: var(--couleur);
+    height: var(--z);
+    width: var(--z);
+    border-radius: var(--z);
+}
+
+/*Carré*/
+.carre {
+    position: relative;
+    background-color: var(--couleur);
+    height: var(--y);
+    width: var(--y);
+    margin-left: auto;
+    margin-right: auto;
+}
+.carreinterieur {
+    position: relative;
+	top : calc((var(--y) - var(--z))/2);
+	left : calc((var(--y) - var(--z))/2);
+	display: table-cell;
+    vertical-align: middle;
+    background-color: var(--couleurfond);
+    height: var(--z);
+    width: var(--z);
+}
+.carre2 {
+    background-color: var(--couleur);
+    height: var(--z);
+    width: var(--z);
+    display: table;
+    margin: 0 auto;
+}
+.carreinterieur2 {
+    background-color: var(--couleurfond);
+    height: var(--z);
+    width: var(--z);
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+.carreinterieur3 {
+	position: relative;
+    background-color: var(--couleurfond);
+    height: var(--y);
+    width: var(--y);
+    left : calc((var(--x) - var(--y))/2);
+    display: table-cell;
+    vertical-align: middle;
+}
+.carrev2 {
+	position: relative;
+    background-color: var(--couleur);
+    height: var(--y);
+    width: var(--y);
+    margin-left: auto;
+    margin-right: auto;
+}
+.carreinterieur4 {
+	position : relative;
+	top : calc((var(--y) - var(--z)) / 2);
+	left : calc((var(--y) - var(--z)) / 2);
+    background-color: var(--couleurfond);
+    height: var(--z);
+    width: var(--z);
+    display: table-cell;
+    vertical-align: middle;
+}
+.carre3 {
+    background-color: var(--couleur);
+    height: var(--z);
+    width: var(--z);
+    display: table;
+    margin: 0 auto;
+}
+
+/*triangle*/
+.triangle {
+    display: table;
+    margin: 0 auto;
+    border-left: calc(var(--y) /2) solid transparent;
+    border-right: calc(var(--y) /2) solid transparent;
+    border-bottom: var(--y) solid var(--couleur);
+}
+
+.trianglerinterieur {
+	position: absolute;
+	bottom: calc(((var(--x) - var(--y))/1.5) + ((var(--y) - var(--z))/3));
+	left : calc(((var(--x) - var(--z))/2) + (var(--z)) / 10);
+	border-left: calc(var(--z) /2.5) solid transparent;
+    border-right: calc(var(--z) /2.5) solid transparent;
+    border-bottom: calc(var(--z) / 1.25) solid var(--couleurfond);
+}
+
+.trianglerinterieur2 {
+	position: absolute;
+	bottom: calc((var(--x) - var(--z))/2);
+	left : calc((var(--x) - var(--z))/2);
+	border-left: calc(var(--z) /2) solid transparent;
+    border-right: calc(var(--z) /2) solid transparent;
+    border-bottom: var(--z) solid var(--couleurfond);
+}
+
+.ptriangle {
+	position: absolute;
+	bottom: calc(((var(--x) - var(--y))/1.5) + ((var(--y) - var(--z))/3));
+	left : calc((var(--x) - var(--z))/2);
+	border-left: calc(var(--z) /2) solid transparent;
+    border-right: calc(var(--z) /2) solid transparent;
+    border-bottom: var(--z) solid var(--couleur);
+}
+
+.triangle2 {
+    display: table;
+    margin: 0 auto;
+    border-left: calc(var(--y) /2) solid transparent;
+    border-right: calc(var(--y) /2) solid transparent;
+    border-bottom: var(--y) solid var(--couleurfond);
+}
+
+.croix{
+	position: absolute;
+	left: calc((var(--x) - var(--y)) / 2);
+    bottom: calc(  ((var(--x) - var(--y))/2) + ((var(--y)) / 4)  );
+}
+
+.croixinté{
+    z-index: 2;
+    position: absolute;
+    left: calc((var(--x) - var(--z))/2);
+    bottom: calc(  ((var(--x) - var(--z))/2) + ((var(--z)) / 2.33)  );
+}
+.croixgauche{
+    position: relative;
+    background-color: var(--couleur);
+    height: calc(var(--y)/4);
+    width: var(--y);
+    top : calc(var(--y) / 8);
+    transform: rotate(45deg);
+}
+.croixdroite{
+    position: relative;
+    background-color: var(--couleur);
+    height: calc(var(--y)/4);
+    width: var(--y);
+    bottom : calc(var(--y) / 8);
+    transform: rotate(-45deg);
+}
+
+.croixgauche2{
+    position: relative;
+    background-color: var(--couleurfond);
+    height: calc(var(--y)/4);
+    width: var(--y);
+    top : calc(var(--y) / 8);
+    transform: rotate(45deg);
+}
+
+.croixdroite2{
+    position: relative;
+    background-color: var(--couleurfond);
+    height: calc(var(--y)/4);
+    width: var(--y);
+    bottom : calc(var(--y) / 8);
+    transform: rotate(-45deg);
+}
+
+.croixgaucheinte{
+    position: relative;
+    background-color: var(--couleurfond);
+    height: calc(var(--z)/16);
+    width: calc(var(--z));
+    top : calc(var(--z) / 32);
+    transform: rotate(45deg);
+}
+.croixdroiteinte{
+    position: relative;
+    background-color: var(--couleurfond);
+    height: calc(var(--z)/16);
+    width: calc(var(--z));
+    bottom : calc(var(--z) / 32);
+    transform: rotate(-45deg);
+}
+.croixgaucheinte2{
+    position: relative;
+    background-color: var(--couleur);
+    height: calc(var(--z)/16);
+    width: calc(var(--z));
+    top : calc(var(--z) / 32);
+    transform: rotate(45deg);
+}
+.croixdroiteinte2{
+    position: relative;
+    background-color: var(--couleur);
+    height: calc(var(--z)/16);
+    width: calc(var(--z));
+    bottom : calc(var(--z) / 32);
+    transform: rotate(-45deg);
+}
+.losangehaut {
+    z-index: 2;
+    position: absolute;
+    left: calc((var(--x) - var(--y)) / 2.4);
+    bottom : calc(var(--x) / 2);
+    border-left: calc(var(--y) /1.9) solid transparent;
+    border-right: calc(var(--y) /1.9) solid transparent;
+    border-bottom: calc(var(--y) /1.9) solid var(--couleur);
+}
+.losangebas {
+    position: absolute;
+    z-index: 2;
+    left: calc((var(--x) - var(--y)) / 2.4);
+    top : calc(var(--x) / 2);
+    border-left: calc(var(--y) /1.9) solid transparent;
+    border-right: calc(var(--y) /1.9) solid transparent;
+    border-top: calc(var(--y) /1.9) solid var(--couleur);
+}
+.losangehaut2 {
+    position: absolute;
+    left: calc((var(--x) - var(--y)) / 2);
+    bottom : calc(var(--x) / 2);
+    border-left: calc(var(--y) /2) solid transparent;
+    border-right: calc(var(--y) /2) solid transparent;
+    border-bottom: calc(var(--y) /2) solid var(--couleurfond);
+}
+.losangebas2 {
+    position: absolute;
+    left: calc((var(--x) - var(--y)) / 2);
+    top : calc(var(--x) / 2);
+    border-left: calc(var(--y) /2) solid transparent;
+    border-right: calc(var(--y) /2) solid transparent;
+    border-top: calc(var(--y) /2) solid var(--couleurfond);
+}
+.losangehautinte {
+    z-index: 3;
+    position: absolute;
+    left: calc((var(--x) - var(--z))/2);
+    bottom : calc(var(--x) / 2);
+    border-left: calc(var(--z) /2) solid transparent;
+    border-right: calc(var(--z) /2) solid transparent;
+    border-bottom: calc(var(--z) /2) solid var(--couleurfond);
+}
+.losangebasinte {
+    z-index: 3;
+    position: absolute;
+    left: calc((var(--x) - var(--z))/2);
+    top : calc(var(--x) / 2);
+    border-left: calc(var(--z) /2) solid transparent;
+    border-right: calc(var(--z) /2) solid transparent;
+    border-top: calc(var(--z) /2) solid var(--couleurfond);
+}
+
+.losangehautinte2 {
+    z-index: 3;
+    position: absolute;
+    left: calc((var(--x) - var(--z))/2);
+    bottom : calc(var(--x) / 2);
+    border-left: calc(var(--z) /2) solid transparent;
+    border-right: calc(var(--z) /2) solid transparent;
+    border-bottom: calc(var(--z) /2) solid var(--couleur);
+}
+
+.losangebasinte2 {
+    z-index: 3;
+    position: absolute;
+    left: calc((var(--x) - var(--z))/2);
+    top : calc(var(--x) / 2);
+    border-left: calc(var(--z) /2) solid transparent;
+    border-right: calc(var(--z) /2) solid transparent;
+    border-top: calc(var(--z) /2) solid var(--couleur);
+}
+/*Figures simples :( */
+.trapeze{
+    width: var(--y);
+    height: var(--y);
+    background: var(--couleur);
+    position: relative;
+    left: calc((var(--x) - var(--y)) / 2);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.trapeze2{
+    width: var(--y);
+    height: var(--y);
+    background: var(--couleurfond);
+    position: relative;
+    left: calc((var(--x) - var(--y)) / 2);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.trapezeinte{
+    width: var(--z);
+    height: var(--z);
+    background: var(--couleurfond);
+    position: absolute;
+    z-index: 2;
+    bottom : calc( ((var(--x) - var(--z))/2.1));
+    left: calc((var(--x) - var(--z))/2);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.trapezeinte2{
+    width: var(--z);
+    height: var(--z);
+    background: var(--couleur);
+    position: absolute;
+    z-index: 2;
+    bottom : calc( ((var(--x) - var(--z))/2.1));
+    left: calc((var(--x) - var(--z))/2);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.octogon{
+    width: var(--y);
+    height: var(--y);
+    background: var(--couleur);
+    position: relative;
+    left: calc((var(--x) - var(--y)) / 2);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+.octogon2{
+    width: var(--y);
+    height: var(--y);
+    background: var(--couleurfond);
+    position: relative;
+    left: calc((var(--x) - var(--y)) / 2);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.octogoninte{
+    width: var(--z);
+    height: var(--z);
+    background: var(--couleurfond);
+    position: absolute;
+    z-index: 2;
+    bottom : calc( ((var(--x) - var(--z))/2.1));
+    left: calc((var(--x) - var(--z))/2);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+.octogoninte2{
+    width: var(--z);
+    height: var(--z);
+    background: var(--couleur);
+    position: absolute;
+    z-index: 2;
+    bottom : calc( ((var(--x) - var(--z))/2.1));
+    left: calc((var(--x) - var(--z))/2);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.value {
+  border-bottom: 4px dashed #bdc3c7;
+  text-align: center;
+  font-weight: bold;
+  font-size: 10em;
+  width: 300px; 
+  height: 100px;
+  line-height: 60px;
+  margin: 40px auto;
+  letter-spacing: -.07em;
+  text-shadow: white 2px 2px 2px;
+}
+input[type="range"] {
+  display: block;
+  -webkit-appearance: none;
+  background-color: #bdc3c7;
+  width: 300px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #e74c3c;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}​
+  input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: white;
+    border: 2px solid #e74c3c;
+  }
+  input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.6);
+  }
